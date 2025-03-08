@@ -13,7 +13,6 @@ class Program
             int userNumber = PromptUserNumber();
             int squared = SquareNumber(userNumber);
             DisplayResult(userName, squared);
-
         }
 
         // functions
@@ -42,6 +41,7 @@ class Program
         {
             Console.WriteLine($"{name}, the square of your number is {square}");
         }
+    
     
     }
 }
