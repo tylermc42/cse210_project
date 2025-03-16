@@ -1,6 +1,9 @@
 using System;
 using System.Runtime.InteropServices;
 
+//I exceeded the requirments by adding a programming where the user is able to rate
+// the day on a scale of 1-10 and that is saved with each entry
+
 class Program
 {
     static void Main(string[] args)
