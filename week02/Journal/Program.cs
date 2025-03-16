@@ -35,7 +35,7 @@ class Program
             }
 
             // prompt and save users choice
-            Console.Write("Please select an option:");
+            Console.Write("Please select an option: ");
             int userChoice = int.Parse(Console.ReadLine());
 
             //if statments to reflect what the user wants to do
@@ -48,6 +48,11 @@ class Program
                 Console.WriteLine(prompt);
                 string response = Console.ReadLine();
 
+                //exceeding requirements
+                //ask user to rate the day on a scale of 1-10
+                Console.Write("Please rate the day on a scale of 1-10, 10 being happy on how the day went and 1 being extremely displeased on how the day went. ");
+                string userRating = Console.ReadLine();
+
                 // create a new entry
                 Entry newEntry = new Entry();
                 //get date
@@ -56,6 +61,8 @@ class Program
                 newEntry._promptText = prompt;
                 //set response 
                 newEntry._entryText = response;
+                //set daily rating
+                newEntry._entryRate = userRating;
 
                 //save new entry to journal
                 myjournal.AddEntry(newEntry);

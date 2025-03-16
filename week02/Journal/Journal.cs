@@ -34,7 +34,7 @@ public class Journal
             foreach (var entry in _entries)
             {
                 // You can add text to the file with the WriteLine method
-                outputFile.WriteLine($"{entry._date} | Prompt: {entry._promptText}\n{entry._entryText}");
+                outputFile.WriteLine($"{entry._date} | Prompt: {entry._promptText}\n{entry._entryText} |\nOverall day rating: {entry._entryRate}\n");
             }
         }
     }
@@ -49,13 +49,18 @@ public class Journal
         {
             string[] parts = line.Split('|');
             //if line contains three parts, add the entry
-            if (parts.Length == 3)
+            if (parts.Length == 4)
             {
                 Entry loadedEntry = new Entry();
                 loadedEntry._date = parts[0];
                 loadedEntry._promptText = parts[1];
                 loadedEntry._entryText = parts[2];
+                loadedEntry._entryRate = parts[3];
                 _entries.Add(loadedEntry);
+            }
+            else
+            {
+                Console.WriteLine($"Warning: Skipping invalid journal entry format: {line}");
             }
         }
     }
