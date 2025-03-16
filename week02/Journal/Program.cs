@@ -3,8 +3,6 @@ using System.Runtime.InteropServices;
 
 class Program
 {
-    private static readonly object random;
-
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World! This is the Journal Project.");

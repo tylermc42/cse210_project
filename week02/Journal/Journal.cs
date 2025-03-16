@@ -12,7 +12,7 @@ public class Journal
     // add entry
     public void AddEntry(Entry newEntry)
     {
-        _entries.Add(newEntry);   
+        _entries.Add(newEntry);
     }
 
     //display entries
@@ -54,7 +54,7 @@ public class Journal
                 Entry loadedEntry = new Entry();
                 loadedEntry._date = parts[0];
                 loadedEntry._promptText = parts[1];
-                loadedEntry._entryText = parts[3];
+                loadedEntry._entryText = parts[2];
                 _entries.Add(loadedEntry);
             }
         }
