@@ -1,5 +1,5 @@
 using System;
-//I exceeded requirements by adding multiple scriptures that the program will randomly choose from when it is ran
+//I exceeded requirements by adding a randomization code to randomly pick a scripture everytime the code is ran
 class Program
 {
     static void Main(string[] args)
